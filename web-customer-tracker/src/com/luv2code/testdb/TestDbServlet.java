@@ -32,10 +32,12 @@ public class TestDbServlet extends HttpServlet {
 		String password = "sorin";
 		
 		try {
+			response.getWriter().println();
 			response.getWriter().println("\nConnecting to "+jdbcUrl);
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection myConn = DriverManager.getConnection(jdbcUrl, user, password);			
-			response.getWriter().println("\nConnected!");
+			response.getWriter().println();
+			response.getWriter().println("Connected!");
 			
 		}catch(Exception e){
 			response.getWriter().println("\n"+e.getMessage());
