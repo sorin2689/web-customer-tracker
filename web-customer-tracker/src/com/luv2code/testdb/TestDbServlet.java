@@ -27,9 +27,14 @@ public class TestDbServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		
-		String jdbcUrl = "jdbc:oracle:thin:@xdvl:1521:xdvl";
-		String user = "train_sorin";
-		String password = "sorin";
+		//String jdbcUrl = "jdbc:oracle:thin:@xdvl:1521:xdvl";
+		//String user = "train_sorin";
+		//String password = "sorin";
+		//String driver = "oracle.jdbc.driver.OracleDriver";
+		String jdbcUrl = "jdbc:mysql://192.168.1.100:3306/web_customer_tracker?useSSL=false";
+		String user = "sorin";
+		String password = "Pallmall0";
+		String driver = "com.mysql.jdbc.Driver";
 		
 		try {
 			response.getWriter().println();
